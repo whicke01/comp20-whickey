@@ -30,13 +30,13 @@ function draw()
 	ctx.drawImage(document.getElementById("sprites"),260, 155, 295-260, 190-155, 175, 300,(3*(295-260)), (3*(190-155)));
 
 	//draw duck 3
-	//ctx.drawImage(document.getElementById("sprites"),
+	ctx.drawImage(document.getElementById("sprites"),80, 195, 113-80, 229-195, 400, 300, (3*(33)), (3*(34)));
 
 	//draw duck 4
-	//ctx.drawImage(document.getElementById("sprites"),130, 120, 165-130, 145-120, 200, 10,(3*(165-130)), (3*(145-120)));
+	ctx.drawImage(document.getElementById("sprites"), 80, 115, 115-80, 148-115, 450, 20,(3*( 115-80 )), (3*( 148-115 )));
 
 	//draw duck 5
-	//ctx.drawImage(document.getElementById("sprites"),130, 120, 165-130, 145-120, 200, 10,(3*(165-130)), (3*(145-120)));
+	ctx.drawImage(document.getElementById("sprites"), 210, 155, 240-210 , 190-155 , 650, 150,(3*( 240-210 )), (3*( 190-155 )));
 
 
 
