@@ -13,9 +13,14 @@
 		var buff = JSON.parse(str);
 		//document.getElementById("list").innerHTML = buff[0].position;
 		for (var i = 0; i < buff.length; i++) {
-			lsit.appendChild(buff[i].company + "<br>");
-			lsit.appendChild(buff[i].location + "<br>");
-			lsit.appendChild(buff[i].position + "<br>" + "<br>");
+			var job_child = document.createElement("p");
+			job_child.innerHTML = (buff[i].company + "<br>" + buff[i].location + "<br>" + buff[i].position + "<br>");
+
+
+			list.appendChild(job_child);
+			//lsit.appendChild(buff[i].company + "<br>");
+			//lsit.appendChild(buff[i].location + "<br>");
+			//lsit.appendChild(buff[i].position + "<br>" + "<br>");
 		}
 
 
