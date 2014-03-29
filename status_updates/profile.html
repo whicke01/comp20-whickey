@@ -27,9 +27,27 @@
             status_elem.insertBefore(p, status_elem.firstChild);
             status_elem.insertBefore(br, status_elem.firstChild);
             status_elem.insertBefore(date_elem, status_elem.firstChild);
+            store(curr_date)
  
 		}
-        
+    }
+	
+	function reload()
+	{
+		elem = document.getElementById("status");
+		output = "";
+        temp_length = localStorage.length;
+		for (key in localStorage) {
+			output = "<p>" + localStorage[key] + "</p>\n" + output;
+		}
+		elem.innerHTML = output;
+	}
+	
+	function store(curr_date)
+	{
+		txt = curr_date;
+		localStorage[new Date().getTime()] = txt;
+		reload();
 	}
 
 
@@ -37,7 +55,7 @@
 </head>
 
 
-<body>
+<body onload="reload()" >
 	<h1>Fecebook</h1>
 	<div id="nav">
 		<ul>
@@ -50,7 +68,7 @@
 		</ul>
 	</div>
 	<h2 id="fullname">Barney Gumble</h2>
-	<h3>What are you thinking about? <input type="text" id="msg" name="msg" size="30" onkeypress="Status_Update()" /></h3>
+	<h3>What are you thinking about? <input type="text" id="msg" name="msg" size="30"  onkeypress="Status_Update()" /></h3>
 	<h3>Updates</h3>
 	<div id="status">
 	</div>
